@@ -491,6 +491,7 @@ function updatePositions() {
 
   var items = document.getElementsByClassName('mover');
   var temp = document.body.scrollTop / 1250;
+  // Calculate all possible values for phase
   var phases = [0, 1, 2, 3, 4].map(function(i) {
     return Math.sin(temp + i);
   });
