@@ -100,6 +100,14 @@ module.exports = function (grunt) {
           keepalive: true,
           base: 'dist'
         }
+      },
+      src: {
+        options: {
+          port: '8000',
+          hostname: 'localhost',
+          keepalive: true,
+          base: 'src'
+        }
       }
     },
 
@@ -137,7 +145,7 @@ module.exports = function (grunt) {
 
   /* Create the `serve` task */
   grunt.registerTask('serve',[
-    'connect'
+    'connect:dist'
   ]);
 
   /* ngrok task to get pagespeed test scores */

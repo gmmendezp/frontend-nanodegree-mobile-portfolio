@@ -16,6 +16,15 @@ To get started, check out the repository and inspect the code.
 * Optimized image sizes and compression. (pizzeria.jpg and profilepic.jpg)
 * Inlined CSS, JS and images
 
+## Optimizations to main.js
+
+* Moved calculation of `phase` outside the loop in `updatePositions()` as it only needs 5 values
+* Added `will-change: transform` and `transform: translateZ(0)` to create layers and reduce painting
+* Replaced `querySelectorAll` with a more optimal `getElementsByClassName`
+* Replaced `querySelector` with a more optimal `getElementById`
+* Improved `changePizzaSizes` to use only percentages instead of coverting to pixels (removed determineDx)
+* Created a variable for storing the selected objects for `randomPizzaContainer` instead of calculating it serveral times inside the loop
+
 ## Steps to run server
 
 1. Clone the repository by downloading the zip file or using `git clone`
