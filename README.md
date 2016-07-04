@@ -24,6 +24,9 @@ To get started, check out the repository and inspect the code.
 * Replaced `querySelector` with a more optimal `getElementById`
 * Improved `changePizzaSizes` to use only percentages instead of coverting to pixels (removed determineDx)
 * Created a variable for storing the selected objects for `randomPizzaContainer` instead of calculating it serveral times inside the loop
+* Moved `pizzasDiv` outside the loop
+* Moved selection of `movingPizzas` to a variable
+* Used `window.screen.height` to calculate the number of pizzas that can fit the screen
 
 ## Steps to run server
 
